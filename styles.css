@@ -1,0 +1,528 @@
+/*---- 01 - fonts -----*/
+/*---- 02 - reset css ----*/
+/*---- 03 - global css ---*/
+/*---- 04 - custom css ----*/
+/*---- 05 - responsive css ---*/
+
+/*-------------------- 01 - FONTS -------------------------*/
+
+@font-face {
+    font-family: 'UbuntuRegular';
+    src: url('fonts/UbuntuRegular.eot');
+    src: url('fonts/UbuntuRegular.eot') format('embedded-opentype'),
+         url('fonts/UbuntuRegular.woff2') format('woff2'),
+         url('fonts/UbuntuRegular.woff') format('woff'),
+         url('fonts/UbuntuRegular.ttf') format('truetype'),
+         url('fonts/UbuntuRegular.svg#UbuntuRegular') format('svg');
+}
+
+/*--------------------- 02 - RESET CSS -------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	line-height: 1.2;
+  font-size: 1em;
+	font-family: verdana, helvetica, sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+}
+
+/*------------------  03 - GLOBAL CSS ----------------------*/
+html {
+  scroll-behavior: smooth;
+}
+.wrapper {
+	width: 100%;
+	max-width: 1040px;
+	margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.col {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.pb-8 {
+	padding-bottom: 8px;
+}
+.pl-10 {
+	padding-left: 10px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+a {
+	color: #e2bd59;
+	padding: 5px 10px;
+	border-radius: 20px;
+	transition: all 0.3s linear;
+}
+a:hover {
+	color: #282822;
+	background-color: #fffedb;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+button {
+  display: flex;
+  margin: 0 auto 20px auto;
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #d15e30;
+  border: none;
+	border-radius: 20px;
+	transition: all 0.3s linear;
+}
+button a {
+  color: #fffedb;
+  font-size: 2rem;
+}
+button:hover {
+  color: #000;
+	background-color: #fffedb;
+	box-shadow: 0 0 20px #000;
+}
+button:hover a {
+  color: #000;
+	background: none;
+	box-shadow: none;
+}
+h1 {
+	text-align: center;
+	font-family: 'UbuntuRegular';
+	font-size: 6rem;
+	font-size: 6em;
+	margin: 15px 120px 25px 120px;
+	background: rgba(255,254,219,0.5);
+	border-radius: 20px;
+}
+h2 {
+	text-align: center;
+	font-size: 2.8rem;
+	color: #fffedb;
+	padding: 5px 10px;
+	margin: 0 150px;
+	background: rgba(0,0,0,0.8);
+	border-radius: 20px;
+}
+h3 {
+	text-align: center;
+	font-size: 2.4rem;
+	color: #fffedb;
+	background: rgba(0,0,0,0.8);
+	border-radius: 20px;
+}
+img {
+	margin: 20px;
+}
+.bg-light {
+	background: rgba(255,254,219,0.8);
+	padding: 20px 0;
+	border-radius: 20px;
+}
+.text {
+	font-size: 1.6rem;
+	color: #000;
+}
+.text p {
+	margin: 20px;
+}
+.br-20 {
+	border-radius: 20px;
+}
+
+
+/*----------------- 04 - CUSTOM CSS ------------------------*/
+
+
+/*--------------- header + accueil ------------------*/
+
+
+body{
+	background: url("../../images/bg-body.jpg") no-repeat center center fixed;
+	background-size: cover;
+}
+#main-nav {
+	position: fixed;
+	font-family: 'UbuntuRegular';
+	color: #fffedb;
+	font-size: 2rem;
+	font-size: 2em;
+	width: 100%;
+	max-width: 200px;
+  height: 100%;
+	background: rgba(0,0,0,0.8);
+	padding: 0 0 30px 20px;
+}
+.id-nav {
+	margin: 30px 0;
+}
+.info-menu li {
+	margin: 5px 0 0 20px;
+	font-size: 1.8rem;
+	font-size: 0.900em;
+}
+.info-menu li a {
+	margin-left: -10px;
+}
+.livrer-pain a {
+  cursor: pointer;
+  color: #fffedb;
+  background-color: #d15e30;
+	border-radius: 20px;
+}
+.livrer-pain a:hover {
+  color: #000;
+	background-color: #fffedb;
+}
+#accueil {
+	min-height: 200px;
+	background-image: url("../../images/bg-h1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 4px solid #000;
+	border-radius: 0 0 20px 20px;
+	margin-bottom: 20px;
+}
+#accueil p {
+	color: #fffedb;
+	text-align: center;
+	margin-top: 10px;
+	font-size: 2rem;
+	padding: 5px 0 10px 0;
+	margin: 0 220px;
+	background: rgba(0,0,0,0.8);
+	border-radius: 0 0 20px 20px;
+}
+.form-container h3 {
+  margin-bottom: 30px;
+}
+/*------------ popup button --------------*/
+
+.open-btn {
+  display: flex;
+  justify-content: center;
+}
+.popup {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+.form-popup {
+  display: none;
+  position: fixed;
+  left: 45%;
+  top:5%;
+  transform: translate(-45%,5%);
+  z-index: 100;
+}
+.form-container {
+  max-width: 300px;
+  padding: 20px 60px;
+  background: rgba(255,254,219,1);
+  border: 2px solid #000;
+  border-radius: 20px;
+}
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 10px -10px;
+  border: none;
+  background: #eee;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+#email {
+  margin: 10px 0 30px -10px;
+}
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 10px #000;
+}
+.form-container .btn {
+  display: flex;
+  justify-content: center;
+  font-size: 1.8rem;
+  background-color: #8ebf42;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.form-container .cancel {
+  background-color: #cc0000;
+}
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+#text-paiement {
+  font-size: 1.8rem;
+}
+#payement {
+  padding: 5px 10px;
+  margin: 10px 0 30px 0;
+  border: 1px solid #000;
+  border-radius: 5px 0 0 5px;
+  font-size: 1.4rem;
+  font-size: 1.4em;
+}
+#reset {
+  cursor: pointer;
+  padding: 5px 20px;
+  color: #fffedb;
+  font-size: 1.4rem;
+  background-color: #222;
+  border: none;
+  border-radius: 20px;
+}
+
+/*---------------------- main ---------------------*/
+
+.text-photo-qual {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+.text-photo-qual .text {
+	margin: auto 20px auto 0;
+}
+.text-photo-col {
+  display: flex;
+  flex-direction: column;
+}
+.text-photo-col .photo {
+  display: flex;
+  margin: 0 auto;
+}
+.container {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  margin: 20px;
+  background-color: #000;
+  border-radius: 20px;
+}
+.pain-h4 {
+  color: rgba(255,254,219,0.8);
+  bottom: -10%;
+  font-size: 2rem;
+  position: absolute;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+}
+.container:hover .pain-h4 {
+  bottom: 45%;
+}
+.container:hover .pain-img img {
+  opacity: 0.5;
+}
+.pain-img {
+  z-index: 5;
+}
+.pain-img img {
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+.idee-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 20px auto;
+  max-width: 680px;
+  padding: 20px 60px;
+  background: rgba(255,254,219,1);
+  border: 2px solid #000;
+  border-radius: 20px;
+}
+.idee-form-gene {
+  justify-content: space-between;
+}
+#idee-form {
+  width: 100%;
+  margin: 10px;
+  padding: 10px 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+#text-domaine {
+  font-size: 1.8rem;
+  font-size: 1.8em;
+  text-align: center;
+  margin: 20px 0 5px 0;
+}
+#domaine-idee {
+  padding: 5px 0 5px 10px;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+#msg {
+  height: 10rem;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+.btn-idee {
+  display: inline-block;
+  margin: 20px auto;
+  font-size: 1.8rem;
+  background-color: #8ebf42;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+.btn-idee-ann {
+  display: inline-block;
+  margin: 20px auto;
+  font-size: 1.8rem;
+  background-color: #cc0000;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/*------------------ footer -------------*/
+
+footer {
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
+  padding: 20px 0;
+  background: rgba(0,0,0,0.8);
+  border-radius: 20px 20px 0 0;
+}
+footer p {
+  color: #fff;
+  margin: auto 100px auto 0;
+}
+
+
+
+/*----------------- 05 - RESPONSIVE CSS -------------------*/
+
+/*------------- menu burger ------------*/
+
+#toggle-nav {
+  display: none;
+}
+nav > input,
+.nav-button {
+  display: none; /* hidden on large screens */
+}
+.nav-button {
+  position: fixed;
+  top: 10px;
+  right: 30px;
+
+}
+/* small screens styles */
+@media (max-width: 760px) {
+  #main-nav {
+    padding: 80px 100px 0 100px;
+  }
+ .nav-inner {
+   position: fixed;
+   z-index: 10;
+   width: 30vw;
+   transform: translateX(-100%) translateZ(0);
+   transition: transform .5s;
+   will-change: transform;
+  }
+  /* here's goes the slide effect */
+  input:checked ~ .nav-inner {
+    transform: translateX(-10%);
+  }
+
+  /* Button deco */
+  .nav-button {
+    display: block;
+    position: fixed;
+    top: 4rem; right: 4rem;
+    z-index: 1000;
+    height: 3rem; width: 5rem;
+    background-color: transparent;
+    background-image: linear-gradient(to right, #fffedb, #fffedb),
+      linear-gradient(to right, #fffedb, #fffedb),
+      linear-gradient(to right, #fffedb, #fffedb);
+    background-position: center top, center, center bottom;
+    background-repeat: no-repeat;
+    background-size: 5rem .6rem;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+  }
+}
