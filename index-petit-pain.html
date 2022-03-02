@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="FR-fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Boulangerie Petit Pain</title>
+    <meta name="description" content="vente et livraison à domicile de pain à eaubonne">
+    <meta name="author" content="Benjamin Verhaeghe">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="design/css/styles.css" rel="stylesheet">
+    <script src="design/js/script.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <header>
+      <div class="nav-toggle">
+      	<div class="nav-toggle-bar"></div>
+      </div>
+      <input type="checkbox" id="toggle-nav" aria-label="open/close navigation">
+      <label for="toggle-nav" class="nav-button"></label>
+      <nav id="main-nav" class="nav nav-inner">
+          <ul>
+              <li class="id-nav"><a href="#accueil">Accueil</a></li>
+              <li class="id-nav"><a href="#qualites">Nos qualités</a></li>
+              <li class="id-nav"><a href="#farines">Nos farines</a></li>
+              <li class="id-nav"><a href="#domicile">À domicile</a></li>
+              <li class="id-nav"><a href="#ecoute">À l'écoute</a></li>
+              <li class="id-nav livrer-pain open-button" onclick="openForm()"><a>Livrer mon pain</a></li>
+              <li class="pb-8 pl-10">Nos horaires :</li>
+                <ol class="info-menu">
+                  <li>lundi : 8h-18h</li>
+                  <li>Mardi : 8h-18h</li>
+                  <li>Mercredi : 8h-13h</li>
+                  <li>Jeudi : 8h-18h</li>
+                  <li>Vendredi : 8h-18h</li>
+                  <li>Samedi : 8h-12h</li>
+                  <li>Dimanche : fermé</li>
+                </ol>
+              <li class="pb-8 pl-10 mt-30">Coordonnées :</li>
+                <ul class="info-menu">
+                  <li>2, Avenue du<br />Général de Gaulle</li>
+                  <li>95600 eaubonne</li>
+                  <li><a href="+33115487548">Tél: 01.15.48.75.48</a></li>
+                </ul>
+          </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="wrapper">
+        <div id="accueil">
+            <h1>Boulangerie Petit Pain</h1>
+            <h2>Vente et livraison à domicile de pain à Eaubonne</h2>
+            <p>Site réaliser par Benjamin Verhaeghe : <a href="https://bencreaweb.fr" target="_blank">bencreaweb.fr</a></p>
+        </div>
+        <div class="open-btn">
+          <button class="open-button" onclick="openForm()"><a>Livrer mon pain chez moi<br />Livraison du lundi au samedi : 9h-17h</a></button>
+        </div>
+        <div class="popup">
+          <div class="form-popup" id="popupForm">
+            <form class="form-container">
+              <h3>Vos coordonnées :</h3>
+              <input type="text" id="prenom" placeholder="Votre prénom" name="prenom" required>
+              <input type="text" id="nom" placeholder="Votre nom" name="nom" required>
+              <input type="text" id="adresse" placeholder="Votre adresse" name="adresse" required>
+              <input type="text" id="telephone" placeholder="Votre numéro" name="telephone" required>
+              <input type="text" id="email" placeholder="Votre E-mail" name="email">
+              <label id="text-paiement" for="paye">Votre moyen de paiement :</label>
+              <select id="payement" name="paye">
+                <option value="carte">Carte bancaire</option>
+                <option value="cheque">Chèque</option>
+                <option value="especes">Espèces</option>
+                <option value="paypal">PayPal</option>
+              </select>
+              <button type="submit" class="btn" onclick="confirmation()">Envoyer</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Annuler</button>
+              <input id="reset" type="reset" value="réinitialiser">
+            </form>
+          </div>
+        </div>
+        <section id="qualites" class="bg-light mb-20">
+          <h2>La boulangerie Petit Pain depuis 1995</h2>
+          <div class="text-photo-qual">
+            <div class="text">
+              <p>Situé au coeur d'Eaubonne, la boulangerie Petit Pain fût fondée en 1995
+              afin de fournir aux habitants du centre ville un pain fait maison.</p>
+              <p>Curabitur ante libero, venenatis eget ultricies a, fermentum vel nisl.
+              Integer semper ipsum augue, et tincidunt ex dapibus eget.</p>
+              <p>Nam eget semper quam.
+              Nullam mattis in metus id facilisis. Suspendisse at viverra sem, ut rutrum mi.
+              Morbi iaculis mauris sed ullamcorper pulvinar.</p>
+            </div>
+            <div class="photo">
+              <img class="br-20" src="images/nos-qualites.jpg" alt="photo de l'intérieur de la boulangerie petit pain avec plein de bonne chose à déguster"
+              width="350" height="350" />
+            </div>
+          </div>
+        </section>
+        <section id="farines" class="bg-light mb-20">
+          <h2>Nos farine de pain 100% bio</h2>
+          <div class="text-photo-col">
+            <div class="photo">
+              <img class="br-20" src="images/nos-farines.jpg" alt="photo de l'intérieur de la boulangerie petit pain avec plein de bonne chose à déguster"
+              width="800" height="300" />
+            </div>
+            <div class="text">
+              <p>Praesent quis lacus auctor, bibendum risus ac, sollicitudin lectus.
+                Mauris ornare vestibulum nulla sit amet gravida. Quisque non lacus ante.</p>
+              <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                Fusce ut massa vel nisi sollicitudin rutrum eu eget libero. Nulla rutrum nisi purus,
+                ut scelerisque odio commodo placerat. In non odio id turpis scelerisque facilisis.</p>
+            </div>
+          </div>
+          <div class="row">
+              <div class="container" onclick="painTradi()">
+                <div class="pain-h4">
+                    <h4>Pain traditionnel</h4>
+                </div>
+                <div class="pain-img">
+                  <img src="images/pain-tradi.jpg" alt="photo de pain avec farine traditionnel" height="200" width="200" />
+                </div>
+              </div>
+              <div class="container" onclick="painCamp()">
+                <div class="pain-h4">
+                    <h4>Pain de campagne</h4>
+                </div>
+                <div class="pain-img">
+                  <img src="images/pain-campagne.jpg" alt="photo de pain avec farine traditionnel" height="200" width="200" />
+                </div>
+              </div>
+              <div class="container" onclick="painCereal()">
+                <div class="pain-h4">
+                    <h4>Pain aux céréales</h4>
+                </div>
+                <div class="pain-img">
+                  <img src="images/pain-cereale.jpg" alt="photo de pain avec farine traditionnel" height="200" width="200" />
+                </div>
+              </div>
+              <div class="container" onclick="painEpeau()">
+                <div class="pain-h4">
+                    <h4>Pain d'épeautre</h4>
+                </div>
+                <div class="pain-img">
+                  <img src="images/pain-epeautre.jpg" alt="photo de pain avec farine traditionnel" height="200" width="200" />
+                </div>
+              </div>
+          </div><!-- class="row" 1er ligne farine  -->
+          <div class="row">
+              <div class="container" onclick="painMais()">
+                <div class="pain-h4">
+                    <h4>Pain de maïs</h4>
+                </div>
+                <div class="pain-img">
+                  <img src="images/pain-mais.jpg" alt="photo de pain avec farine traditionnel" height="200" width="200" />
+                </div>
+              </div>
+              <div class="container" onclick="painGluten()">
+                <div class="pain-h4">
+                    <h4>Pain sans gluten</h4>
+                </div>
+                <div class="pain-img">
+                  <img src="images/pain-sans-gluten.jpg" alt="photo de pain avec farine traditionnel" height="200" width="200" />
+                </div>
+              </div>
+              <div class="container" onclick="painSeigle()">
+                <div class="pain-h4">
+                    <h4>Pain de seigle</h4>
+                </div>
+                <div class="pain-img">
+                  <img src="images/pain-seigle.jpg" alt="photo de pain avec farine traditionnel" height="200" width="200" />
+                </div>
+              </div>
+              <div class="container" onclick="painAvoine()">
+                <div class="pain-h4">
+                    <h4>Pain d'avoine</h4>
+                </div>
+                <div class="pain-img">
+                  <img src="images/pain-avoine.jpg" alt="photo de pain avec farine traditionnel" height="200" width="200" />
+                </div>
+              </div>
+          </div><!-- class="row" 2eme ligne farine -->
+        </section>
+        <section id="domicile" class="bg-light mb-20">
+          <h2>Livraison à domicile</h2>
+          <div class="text-photo-col">
+            <div class="photo">
+              <img class="br-20" src="images/a-domicile.jpg" alt="photo de l'intérieur de la boulangerie petit pain avec plein de bonne chose à déguster"
+              width="800" height="300" />
+            </div>
+            <div class="text">
+              <p>Donec malesuada at velit a consequat. Integer turpis libero, auctor sed orci vel,
+                consectetur posuere nibh. Nunc sed mauris a dui efficitur placerat.
+                Curabitur malesuada felis ac nisi efficitur, nec hendrerit tellus lacinia.
+                Sed neque libero, accumsan non erat pulvinar, vulputate mollis erat.
+                Mauris lobortis molestie tortor, nec vulputate mauris malesuada ac.</p>
+              <p>Pellentesque semper elit tortor, et malesuada dolor sagittis ut.
+                Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            </div>
+          </div>
+          <div class="open-btn">
+            <button class="open-button" onclick="openForm()"><a>Livrer mon pain chez moi<br />Livraison du lundi au samedi : 9h-17h</a></button>
+          </div>
+        </section>
+        <section id="ecoute" class="bg-light mb-20">
+          <h2>Une idée ? On vous ecoute</h2>
+          <div class="text-photo-col">
+            <div class="photo">
+              <img class="br-20" src="images/a-ecoute.jpg" alt="photo de l'intérieur de la boulangerie petit pain avec plein de bonne chose à déguster"
+              width="800" height="300" />
+            </div>
+            <div class="text">
+              <p>Nam vitae odio sed mauris commodo gravida. Phasellus sit amet porta quam.
+                Integer elit libero, rhoncus vitae nibh ac, mollis hendrerit erat.
+                Suspendisse turpis nibh, gravida id ante vitae, luctus pretium lectus.
+                Donec dignissim elit vitae augue iaculis, ut rutrum nibh aliquam.
+                Vestibulum viverra orci nec purus ultrices interdum.
+                In enim ligula, luctus ac porttitor a, maximus id nibh.</p>
+            </div>
+          </div>
+          <form class="idee-container">
+            <h3>Votre idée :</h3>
+            <div class="row idee-form-gene">
+              <input type="text" id="idee-form" placeholder="Votre prénom" name="prenom">
+              <input type="text" id="idee-form" placeholder="Votre nom" name="nom">
+            </div>
+            <div class="row idee-form-gene">
+              <input type="text" id="idee-form" placeholder="Votre e-mail" name="e-mail">
+            </div>
+            <label id="text-domaine" for="idee">Choisissez le domaine de votre idée :</label>
+            <select id="domaine-idee" name="idee">
+              <option value="idee-boulangerie">La boulangerie Petit Pain en elle même</option>
+              <option value="idee-nouvelle">Une nouvelle farine à proposer</option>
+              <option value="idee-livraison">Le système de livraison à domicile</option>
+              <option value="idee-payement">Le système de payement</option>
+              <option value="idee-site">Le site web Petit Pain</option>
+              <option value="idee-autre">Autre</option>
+            </select>
+            <textarea id="msg" name="user_message" placeholder="Votre idée :"></textarea>
+            <div class="row">
+              <button type="submit" class="btn-idee" onclick="confirmationIdee()">Envoyer</button>
+              <button class="btn-idee-ann" type="reset">Annuler</button>
+            </div>
+          </form>
+        </section>
+      </div><!-- div wrapper -->
+    </main>
+    <footer class="wrapper">
+      <p>Boulangerie Petit Pain 2020/2021 - Site réaliser par Benjamin Verhaeghe alias Benji</p>
+      <a href="#accueil">Retour en haut</a>
+    </footer>
+  </body>
+</html>
